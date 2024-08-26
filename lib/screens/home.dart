@@ -29,7 +29,7 @@ Future<void> actualizarDatos() async {
     'lon': '$longitud',
     'lang': lang,
     'units': units,
-    'appid': apiKey,
+    'appid': '3e4b42a80ce129bc972ff5454ef6bb5c',
   });
 
   try {
@@ -50,7 +50,22 @@ Future<void> actualizarDatos() async {
 }
 
 class _ClimaState extends State<Clima> {
-  
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(minutes: 5), (Timer timer) {
+      actualizarDatos();
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
