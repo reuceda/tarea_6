@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:dotenv/dotenv.dart' as dotenv;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:tarea_6/post/post.dart';
@@ -16,11 +15,8 @@ var _ciudad = '', _temp = 0.00, _desc = '', _icon = '';
 
 Future<void> actualizarDatos() async {
   
-  var env = dotenv.DotEnv()..load();
-
   double latitud = 15.75;
   double longitud = -86.78;
-  String? apiKey = env['API_KEY'];
   String lang = 'sp';
   String units = 'metric';
 
