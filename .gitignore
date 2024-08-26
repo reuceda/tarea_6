@@ -1,0 +1,24 @@
+# Ignorar todo
+*.dart_tool
+/android/
+/ios/
+/linux/
+/macos/
+/web/
+/windows/
+.metadata
+*.lock
+*.yaml
+.env
+
+
+# Ignorar archivos temporales y de caché típicos
+*.log
+*.tmp
+*.swp
+*.DS_Store
+.idea/
+.vscode/
+build/
+pubspec.lock
+
