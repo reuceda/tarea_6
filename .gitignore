@@ -9,7 +9,7 @@
 .metadata
 *.lock
 *.yaml
-.env
+*.env
 
 
 # Ignorar archivos temporales y de caché típicos
