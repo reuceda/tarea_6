@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dotenv/dotenv.dart' as dotenv;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -48,6 +50,7 @@ Future<void> actualizarDatos() async {
 }
 
 class _ClimaState extends State<Clima> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

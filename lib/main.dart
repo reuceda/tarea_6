@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tarea_6/screens/home.dart';
 
-void main() {
+void main() async {
+  await actualizarDatos();
   runApp(const MainApp());
 }
 
